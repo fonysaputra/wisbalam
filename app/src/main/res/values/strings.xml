@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Wisata Bandar Lampung</string>
+    <string name="title_activity_lihat_peta">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="search_hint">Cari</string>
+    <string name="permission_dialog">Accessing Location Permissions required</string>
+    <string name="go_to_permissions_settings">Go to App settings and enable permissions</string>
+
+</resources>

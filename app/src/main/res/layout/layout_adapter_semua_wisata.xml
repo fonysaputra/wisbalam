@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:clickable="true"
+    android:foreground="?selectableItemBackground"
+    card_view:cardBackgroundColor="#FFF"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="6dp"
+    card_view:contentPadding="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            card_view:srcCompat="@android:drawable/ic_delete" />
+        <TextView
+            android:id="@+id/tvnamawisata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_below="@+id/img"
+            android:fontFamily="@font/aldrich"
+            android:text="Double Tape Wontape 1/2"
+            android:textColor="#000"
+            android:background="#4bb0ee"
+            android:textSize="19dp" />
+
+
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#e5bf84"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wisbalam.server.menuutama.MainMenu"
+   >
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:id="@+id/bak"
+        android:background="@drawable/banneratas"
+        android:layout_height="110dp" />
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_below="@+id/bak"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/carouselView">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:id="@+id/menuutama"
+                android:src="@drawable/menuutama"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/lihatPeta"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="89dp"
+                android:src="@drawable/lihatpeta"
+                android:layout_marginLeft="17dp"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:id="@+id/tlihatPeta"
+                android:text="Lihat Peta"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:textAlignment="center"
+                android:layout_below="@+id/lihatPeta"
+                android:layout_marginLeft="17dp"
+                android:layout_alignParentLeft="true" />
+
+            <ImageView
+                android:id="@+id/wisatabaru"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignTop="@+id/lihatPeta"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/daftarwisata" />
+
+            <TextView
+                android:id="@+id/wisatabarutulisan"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_below="@+id/lihatPeta"
+                android:layout_centerHorizontal="true"
+                android:text="Tambah Wisata Baru"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/bantuantulisan"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_alignStart="@+id/bantuan"
+                android:layout_below="@+id/lihatPeta"
+                android:text="Bantuan Aplikasi"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:layout_alignLeft="@+id/bantuan" />
+
+            <ImageView
+                android:id="@+id/bantuan"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/lihatPeta"
+                android:layout_marginEnd="19dp"
+                android:src="@drawable/help"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="19dp" />
+
+            <ImageView
+                android:id="@+id/tentang"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/lihatPeta"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/aboutus" />
+
+            <TextView
+                android:id="@+id/tentangtulisan"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_alignStart="@+id/tentang"
+                android:layout_below="@+id/tentang"
+                android:text="Tentang Kami"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:layout_alignLeft="@+id/tentang" />
+
+            <ImageView
+                android:id="@+id/keluar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/bantuan"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/keluar" />
+
+            <TextView
+                android:id="@+id/keluartulisan"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_alignStart="@+id/keluar"
+                android:layout_below="@+id/tentang"
+                android:text="Keluar Aplikasi"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:layout_alignLeft="@+id/keluar" />
+
+            <ImageView
+                android:id="@+id/kategori"
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tentangtulisan"
+                android:src="@drawable/kategoriwisata"
+                android:layout_alignParentLeft="true" />
+
+            <ImageView
+                android:id="@+id/sejarah"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="17dp"
+                android:layout_below="@+id/kategori"
+                android:src="@drawable/butonwisatasejarahdanreligi" />
+
+            <TextView
+                android:id="@+id/sejarahtulisan"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_alignStart="@+id/lihatPeta"
+                android:layout_below="@+id/sejarah"
+                android:text="Wisata Sejarah Dan Religi"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:layout_alignLeft="@+id/lihatPeta" />
+
+            <ImageView
+                android:id="@+id/alam"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignTop="@+id/sejarah"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/wisataalam" />
+
+            <TextView
+                android:id="@+id/alamtulisan"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_below="@+id/sejarah"
+                android:layout_centerHorizontal="true"
+                android:text="Wisata Cagar Alam / Alam"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/bahari"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignStart="@+id/bantuan"
+                android:layout_alignTop="@+id/sejarah"
+                android:src="@drawable/wisatapantai"
+                android:layout_alignLeft="@+id/bantuan" />
+
+            <TextView
+                android:id="@+id/baharitulisan"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_alignStart="@+id/bantuan"
+                android:layout_below="@+id/sejarah"
+                android:text="Wisata Bahari / Laut"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:layout_alignLeft="@+id/bantuan" />
+
+            <ImageView
+                android:id="@+id/belanja"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/sejarah"
+                android:src="@drawable/wisatabelanja"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/belanjatulisan"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_alignStart="@+id/tentang"
+                android:layout_below="@+id/belanja"
+                android:text="Wisata Belanja"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:layout_alignLeft="@+id/tentang" />
+
+            <ImageView
+                android:id="@+id/kuliner"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/bahari"
+                android:layout_marginRight="80dp"
+                android:src="@drawable/wisatakuliner"
+                android:layout_marginTop="50dp"
+            />
+
+            <TextView
+                android:id="@+id/kulinertulisan"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_alignStart="@+id/keluar"
+                android:layout_below="@+id/belanja"
+                android:text="Wisata Kuliner"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:layout_alignLeft="@+id/keluar" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

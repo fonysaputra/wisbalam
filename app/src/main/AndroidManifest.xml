@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wisbalam.server">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.wisbalam.server.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <application
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:name=".koneksi.AppController"
+        android:noHistory="true"
+        android:screenOrientation="portrait"
+        android:icon="@drawable/common_ic_googleplayservices"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/common_ic_googleplayservices"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".menuutama.MainMenu"
+                    android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- <meta-list_oleholeh -->
+        <!-- android:name="com.google.android.maps.v2.API_KEY" -->
+        <!-- android:value="AIzaSyDzwLzJ_Gt1L9bSyE7_Ml7Pg2KLuqhO4YU" /> -->
+
+        <activity android:name=".Bantuan"
+            android:label="Bantuan Aplikasi"
+            android:parentActivityName=".menuutama.MainMenu"/>
+        <activity android:name=".Tentang"
+            android:label="Tentang Aplikasi"
+            android:parentActivityName=".menuutama.MainMenu"/>
+        <activity android:name=".list.detail_wisata"
+            android:label="Detail Wisata"
+            android:theme="@style/Theme.Design"
+            android:parentActivityName=".list.semua_wisata"/>
+        <activity android:name=".maps.LihatPeta" />
+        <activity android:name=".maps.LihatPeta2" />
+
+        <activity android:name=".list.semua_wisata"
+            android:label="Wisata Bahari/Laut"
+            android:parentActivityName=".menuutama.MainMenu"/>
+
+        <activity android:name=".list.wisata_cagaralam"
+            android:label="Wisata Cagar Alam"
+            android:parentActivityName=".menuutama.MainMenu"/>
+        <activity android:name=".list.wisata_sejarah"
+            android:label="Wisata Sejarah"
+            android:parentActivityName=".menuutama.MainMenu"/>
+        <activity android:name=".list.wisata_kuliner"
+            android:label="Wisata Kuliner"
+            android:parentActivityName=".menuutama.MainMenu"/>
+        <activity android:name=".list.wisata_belanja"
+            android:label="Wisata Belanja"
+            android:parentActivityName=".menuutama.MainMenu"/>
+
+
+        <activity android:name=".list.wisata_baru"
+            android:label="Wisata Baru"
+            android:parentActivityName=".menuutama.MainMenu"/>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".maps.MapsAllWisata"
+            android:label="@string/title_activity_maps"
+
+        android:parentActivityName=".menuutama.MainMenu" />
+
+        <activity android:name=".maps.DetailMaps" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>
